@@ -47,7 +47,7 @@ http://www.templatemo.com/tm-506-tinker
                         <!-- <li><a href="#" class="scroll-link" data-id="about">About Us</a></li> -->
                         <li><a href="#" class="scroll-link" data-id="portfolio" class="navbar-brand scroll-top"><b>Gallery</b></a></li>
                         <li><a href="#" class="scroll-link" data-id="blog" class="navbar-brand scroll-top"><b>Our Post</b></a></li>
-                        <li ><a href="./Login_Template/customer_login.html"><b>Login</b></a></li>
+                        <li ><a href="./Login_Template/artist_login.html"><b>Login</b></a></li>
                         <li><a href="./Registration_Template/Registration.html"><b>Signup</b></a></li>
                     </ul>
                 </div>

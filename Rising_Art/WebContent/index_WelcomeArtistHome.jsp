@@ -31,6 +31,8 @@
                 out.println("Pincode ="+pincode+"<br>");
          %>
          <br><a style="text-align: right;" href="Login_Template/artist_login.html">Logout</a>
-      
+      	<%@ include file= "Header_Menu.jsp" %>
+		<%@ include file= "Body.jsp" %>
+		<%@ include file= "Footer.jsp" %>
 </body>
 </html>
