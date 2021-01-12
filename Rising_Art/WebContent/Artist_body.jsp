@@ -69,7 +69,7 @@
         </div>
     </section> -->
 
-    <section id="portfolio">
+    <!-- <section id="portfolio">
         <div class="content-wrapper">
             <div class="inner-container container">
                 <div class="row">
@@ -142,7 +142,7 @@
                 </div>
             </div>
         </div> 
-    </section>
+    </section> -->
 
 
 <!--     <section id="testimonial">
@@ -188,7 +188,47 @@
         <div class="container">
             <div class="row">
                 <div class="wrapper">
-                    <div class="col-md-4">
+                	<center>
+                	<table>
+                      	  
+                          <br><br>
+                          <tr>
+                              <td align="right"><font size="4px" color="crimson"><b>Id :</b></font></td>
+                              <td><b>&emsp;<font size="4px"><%=id%></font></b></td>
+                          </tr>
+                          <tr>
+                              <td align="right"><font size="4px" color="crimson"><b>Name :</font></b></td>
+                              <td><b>&emsp;<font size="4px"><%=name%></font></b></td>
+                          </tr>
+                          <tr>
+                              <td align="right"><font size="4px" color="crimson"><b>DOB :</font></b></td>
+                              <td><b>&emsp;<font size="4px"><%=date%></font></b></td>
+                          </tr>
+                          <tr>
+                              <td align="right"><font size="4px" color="crimson"><b>Gender :</font></b></td>
+                              <td><b>&emsp;<font size="4px"><%=gender%></font></b></td>
+                          </tr>
+                          <tr>
+                              <td align="right"><font size="4px" color="crimson"><b>Contact No :</font></b></td>
+                          	  <td><b>&emsp;<font size="4px"><%=mobile%></font></b></td>
+                          </tr>
+                          <tr>
+                              <td align="right"><font size="4px" size="4px" color="crimson"><b>Address :</font></b></td>
+                              <td><b>&emsp;<font size="4px"><%=add%></font></b></td>
+                          </tr>
+                          <tr>
+                              <td align="right"><font size="4px" color="crimson"><b>City :</font></b></td>
+                              <td><b>&emsp;<font size="4px"><%=city%></font></b></td>
+                          </tr>
+                          <tr>
+                              <td align="right"><font size="4px" color="crimson"><b>Pincode :</font></b></td>
+                              <td><b>&emsp;<font size="4px"><%=pincode%></font></b></td>
+                          </tr>
+                     </table>
+                     </center>
+                     <br>
+
+                    <!-- <div class="col-md-4">
                         <div class="section-heading">
                             <h4>Our Posts</h4>
                             <div class="line-dec"></div>
@@ -205,38 +245,38 @@
                         <section id="first-tab-group" class="tabgroup">
                             <div id="tab1">
                                 <img src="img/blog_item_01.jpg" alt="">
-                                <!-- <div class="text-content">
+                                <div class="text-content">
                                     <h4>Nulla eget convallis augue</h4>
                                     <span><a href="#">Digital Marketing</a> / <a href="#">Honey</a> / <a href="#">26 September 2017</a></span>
                                     <p>Donec interdum scelerisque auctor. Nulla id lorem auctor, bibendum lectus elementum, porta felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                </div> -->
+                                </div>
                             </div>
                             <div id="tab2">
                                 <img src="img/blog_item_02.jpg" alt="">
-                                <!-- <div class="text-content">
+                                <div class="text-content">
                                     <h4>Quisque ultricies maximus</h4>
                                     <span><a href="#">Branding</a> / <a href="#">David</a> / <a href="#">14 September 2017</a></span>
                                     <p>Etiam fringilla posuere pretium. Maecenas tempor pellentesque elit in dapibus. Curabitur viverra urna sem, ut sollicitudin sem congue vel. Donec fringilla augue in justo molestie fermentum quis ac mi.</p>
-                                </div> -->
+                                </div>
                             </div>
                             <div id="tab3">
                                 <img src="img/blog_item_03.jpg" alt="">
-                                <!-- <div class="text-content">
+                                <div class="text-content">
                                     <h4>Sed vel elit et lorem</h4>
                                     <span><a href="#">Web Design</a> / <a href="#">William</a> / <a href="#">20 August 2017</a></span>
                                     <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id ipsum porta, dictum sem sed, bibendum quam. Maecenas mattis risus eget orci rhoncus.</p>
-                                </div> -->
+                                </div>
                             </div>
                             <div id="tab4">
                                 <img src="img/blog_item_04.jpg" alt="">
-                                <!-- <div class="text-content">
+                                <div class="text-content">
                                     <h4>Vivamus purus neque</h4>
                                     <span><a href="#">E-Commerce</a> / <a href="#">George</a> / <a href="#">14 August 2017</a></span>
                                     <p>Aliquam erat volutpat. Nulla at nunc nec ante rutrum congue id in diam. Nulla at lectus non turpis placerat volutpat lacinia ut mi. Quisque ultricies maximus justo a blandit. Donec sit amet commodo arcu. Sed sit amet iaculis mi, vel fermentum nisi. Morbi dui enim, vestibulum non accumsan ac, tempor non nisl.</p>
-                                </div> -->
+                                </div>
                             </div>
                         </section>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

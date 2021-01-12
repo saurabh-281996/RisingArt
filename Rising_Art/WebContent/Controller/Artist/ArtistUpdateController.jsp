@@ -9,15 +9,16 @@
     </head>
     <body>
           <%
+          String id =(String) session.getAttribute("aid");
             int Id=0;
           	//String id =request.getParameter("t1");
             String name = request.getParameter("t1");
             String date = request.getParameter("t2");
             String gender = request.getParameter("t3");
-            String password = request.getParameter("t4");
+            /* String password = request.getParameter("t4"); */
             String email = request.getParameter("t5");
             String mobile = request.getParameter("t6");
-            String address = request.getParameter("t7");
+           // String address = request.getParameter("t7");
             String city = request.getParameter("t8");
             String pincode = request.getParameter("t9");
             
@@ -37,7 +38,7 @@
                 st = con.createStatement();
                 rs = st.executeQuery("select * from artist");
 
-               	status = st.executeUpdate("INSERT INTO artist (aname,a_date,gender,password,email,phone,address,city,zipcode) VALUES ('" + name + "','" + date + "','" + gender + "','" +  password + "','" + email + "','" + mobile + "','" + address + "','" + city + "'," + pincode + ")");
+               	status = st.executeUpdate("update artist set aname='"+name+"', a_date='"+date+"', gender='"+gender+"', email='"+email+"' ,phone='"+mobile+"' ,city='"+city+"' ,zipcode='"+pincode+"' where artist_id='"+id+"'");
 
 //           		status=1;    
                 /*  while (rs.next()) {
@@ -48,16 +49,16 @@
                 */
                 if (status == 1) 
                 {
-                   rs=st.executeQuery("select * from artist");
+                   /*  rs=st.executeQuery("select * from artist");
                    while(rs.next())
                    {
-                       if(rs.getString("email").equals(email) && rs.getString("password").equals(password) && rs.getString("a_date").equals(date) && rs.getString("phone").equals(mobile))
+                     // if(rs.getString("email").equals(email) && rs.getString("password").equals(password) && rs.getString("a_date").equals(date) && rs.getString("phone").equals(mobile))
                        {
                             
                            Id=rs.getInt("artist_id");
                            //out.println("Your Artist Id is:"+Id);
-                       }
-                   }  
+                       } 
+                   }   */
                      
 //                    s=Integer.parseInt(request.getParameter("t4"));
 //                    i=request.getParameter("t1");
@@ -72,15 +73,15 @@
 //                    out.println("<br>");
                     
                       
-                    //  out.println("Data Inserted Successfully");
+                   // out.println("Data Inserted Successfully");
 //                    status=rs.executeUpdate("SELECT sid from players where sid = (select max(sid) from players)")
 //                if (status == 1) {
               
          %>   
               
      		<script>
-            	window.location = "../Registration_Template/index_welcomeArtistReg.jsp?id=<%=Id%>";
-        	</script> 
+            	window.location = "../../Registration_Template/index_welcomeArtistUpdate.jsp";
+        	</script>
          
         <%
                 }  

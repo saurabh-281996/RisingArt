@@ -38,17 +38,15 @@
 //                    out.println(rs.getString("password"));
                     if (rs.getString("artist_id").equals(AId) && rs.getString("password").equals(Pass)) 
                     {
-                        session.setAttribute("name",rs.getString("a.aname"));
-                        session.setAttribute("date",rs.getString("a.a_date"));
-                        session.setAttribute("gender",rs.getString("a.gender"));
-                        session.setAttribute("email",rs.getString("a.email"));
-                        session.setAttribute("mobile",rs.getString("a.phone"));
-                        session.setAttribute("add",rs.getString("a.Address"));
-                        session.setAttribute("city",rs.getString("a.City"));
-                        session.setAttribute("pincode",rs.getString("a.zipcode"));
+                        session.setAttribute("name",rs.getString("name"));
+                       	session.setAttribute("email",rs.getString("email"));
+                        session.setAttribute("mobile",rs.getString("phone"));
+                        session.setAttribute("add",rs.getString("address"));
+                        session.setAttribute("city",rs.getString("city"));
+                        session.setAttribute("password",rs.getString("password"));
                    
-                        session.setAttribute("id",rs.getString("artist_id"));
-                        Id=rs.getInt("artist_id");
+                        //session.setAttribute("id",rs.getString("artist_id"));
+                       // Id=rs.getInt("artist_id");
                                            
                         /* Sid=rs.getString("id");
                           f.attendencestudent(Sid);  */
@@ -68,9 +66,9 @@
             {
                 
 //                out.println("<center><table>GOOD MORNING Your Attendence has been registered</table></center>");
-                	session.setAttribute("aid", AId);
+              //  	session.setAttribute("aid", AId);
                 
-                 out.println("Login Successfullly");
+                // out.println("Login Successfullly");
                 
         %>
         		<script type="text/javascript">
@@ -79,7 +77,7 @@
             <!--if (status == 1) {-->
      <script>
 
-            window.location = "../index_WelcomeArtistHome.jsp";
+            window.location = "../../index_WelcomeAdminHome.jsp";
         </script>
         <%
         } else {
@@ -89,7 +87,7 @@
        			alert("user id or password incorrect");
         		
         
-            window.location ="../Login_Template/artist_login.html";
+            window.location ="../../Login_Template/admin_login.html";
         </script> 
         <%
             }
