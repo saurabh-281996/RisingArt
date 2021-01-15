@@ -43,8 +43,8 @@
                         session.setAttribute("gender",rs.getString("a.gender"));
                         session.setAttribute("email",rs.getString("a.email"));
                         session.setAttribute("mobile",rs.getString("a.phone"));
-                        session.setAttribute("add",rs.getString("a.Address"));
-                        session.setAttribute("city",rs.getString("a.City"));
+                        session.setAttribute("add",rs.getString("a.address"));
+                        session.setAttribute("city",rs.getString("a.city"));
                         session.setAttribute("pincode",rs.getString("a.zipcode"));
                         session.setAttribute("password",rs.getString("a.password"));
                    

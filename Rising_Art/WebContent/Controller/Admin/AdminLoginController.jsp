@@ -9,7 +9,7 @@
 </head>
 <body>
 
-                <%
+          <%
             Connection con;
             Statement st;
             ResultSet rs;
@@ -27,7 +27,7 @@
                 Class.forName("com.mysql.jdbc.Driver");
                 con = DriverManager.getConnection("jdbc:mysql://localhost:3307/online_art_gallery?user=root & password=");
                 st = con.createStatement();
-                rs = st.executeQuery("select * from artist a");
+                rs = st.executeQuery("select * from admin");
 
                 while (rs.next()) {
                   /*   out.println(rs.getString("id"));
