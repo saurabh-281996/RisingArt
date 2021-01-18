@@ -1,4 +1,4 @@
-
+<%@page import="java.sql.*"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +17,12 @@
 	<link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,700" rel="stylesheet">
 </head>
 <body>
+		<%
+		String id =(String) session.getAttribute("aid");
+       	if (id != null) {  
+		
+		%>
+
 	<div class="w3ls-banner">
 	<div class="heading">
 				<h1>Edit Information</h1>
@@ -37,17 +43,29 @@
 			</div>
 			
 			<% 
-				String id =(String) session.getAttribute("aid");
-                String name=(String) session.getAttribute("name");
-                String date=(String) session.getAttribute("date");
-                String gender=(String) session.getAttribute("gender");
-                String email=(String) session.getAttribute("email");
-                String mobile=(String) session.getAttribute("mobile");
-                String add=(String) session.getAttribute("add");
-                String city=(String) session.getAttribute("city");
-                String pincode=(String) session.getAttribute("pincode");
-                String password=(String) session.getAttribute("password");
-			%>
+			
+			
+			Connection con;
+	        Statement st;
+	        ResultSet rs;
+			try {
+	            Class.forName("com.mysql.jdbc.Driver");
+	            con = DriverManager.getConnection("jdbc:mysql://localhost:3307/online_art_gallery?user=root & password=");
+	            st = con.createStatement();
+	            rs = st.executeQuery("select * from artist where artist_id='"+id+"'");
+
+	            while (rs.next()) {
+	                String name=rs.getString("aname");
+	                String date=rs.getString("a_date");
+	                String gender=rs.getString("gender");
+	                String email=rs.getString("email");
+	                String mobile=rs.getString("phone");
+	                String add=rs.getString("address");
+	                String city=rs.getString("city");
+	                String pincode=rs.getString("zipcode");
+	                String password=rs.getString("password");
+	         %>
+			
             <div class="agile-form">
 			
 					
@@ -81,7 +99,7 @@
 							</label>
 							<div class="form-input">
 								<select class="form-dropdown" name="t3" id="t3"  style="-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;font-weight: bold" required>
-									<option selected="selected" value="<%=gender%>" disabled="disabled" ><%=gender%></option>
+									<option selected value="<%=gender%>"><%=gender%></option>
 									<option value="Male"> Male </option>
 									<option value="Female"> Female </option>
 									
@@ -155,5 +173,25 @@
 		<p>Copyright &copy; 2020 Rising Art</p> 
 	</div>
 	</div>
+	<%
+            } 
+        }
+   
+    catch (Exception e) 
+    {
+		System.out.println(e);
+    }
+		
+    
+     } else {
+    %>
+       <script>
+			alert("Session is over");
+            window.location = "../Login_Template/artist_login.html";
+        </script>
+        
+    <%
+        }
+    %>  
 </body>
 </html>

@@ -39,7 +39,7 @@
                 rs = st.executeQuery("select * from artist");
 
                	status = st.executeUpdate("update artist set aname='"+name+"', a_date='"+date+"', gender='"+gender+"', email='"+email+"' ,phone='"+mobile+"' ,city='"+city+"' ,zipcode='"+pincode+"' where artist_id='"+id+"'");
-
+				
 //           		status=1;    
                 /*  while (rs.next()) {
                     if (rs.getInt("customer_id")==Id) {
@@ -49,6 +49,16 @@
                 */
                 if (status == 1) 
                 {
+                	
+                   /*  session.setAttribute("date",rs.getString("a.a_date"));
+                    session.setAttribute("gender",rs.getString("a.gender"));
+                    session.setAttribute("email",rs.getString("a.email"));
+                    session.setAttribute("mobile",rs.getString("a.phone"));
+                    session.setAttribute("add",rs.getString("a.address"));
+                    session.setAttribute("city",rs.getString("a.city"));
+                    session.setAttribute("pincode",rs.getString("a.zipcode"));
+                    session.setAttribute("password",rs.getString("a.password"));  */
+                
                    /*  rs=st.executeQuery("select * from artist");
                    while(rs.next())
                    {
@@ -80,7 +90,7 @@
          %>   
               
      		<script>
-            	window.location = "../../Registration_Template/index_welcomeArtistUpdate.jsp";
+            	window.location = "../../index_WelcomeArtistHome.jsp";
         	</script>
          
         <%

@@ -6,7 +6,13 @@
 <!--
 Tinker Template
 http://www.templatemo.com/tm-506-tinker
--->
+-->		
+		<%
+		String id =(String) session.getAttribute("aid");
+        if (id != null) {  
+		
+		%>
+		
         <title>Rising Art</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,7 +36,7 @@ http://www.templatemo.com/tm-506-tinker
 		
 <body>
 		<% 
-				String id =(String) session.getAttribute("aid");
+				
                 String name=(String) session.getAttribute("name");
                 String date=(String) session.getAttribute("date");
                 String gender=(String) session.getAttribute("gender");
@@ -82,7 +88,7 @@ http://www.templatemo.com/tm-506-tinker
   							<div class="dropdown-content">
   								<a href="#" class="scroll-link" data-id="blog" class="navbar-brand scroll-top"><font size="2px"><b>PROFILE</b></font></a><br>
   								<a href="Registration_Template/index_ArtistEditInfo.jsp"><font size="2px"><b>EDIT PROFILE</b></font></a><br>
-  								<a href="Login_Template/artist_login.html"><font size="2px"><b>LOGOUT</b></font></a>
+  								<a href="Login_Template/index_ArtistLogout.jsp"><font size="2px"><b>LOGOUT</b></font></a>
 							</div>
                         </li>
                     </ul>
@@ -94,3 +100,4 @@ http://www.templatemo.com/tm-506-tinker
         <!--/.container-->
     </div>
     <!--/.header-->
+ 

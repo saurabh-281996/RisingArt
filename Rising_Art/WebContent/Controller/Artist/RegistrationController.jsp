@@ -1,4 +1,3 @@
-
 <%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,8 +8,8 @@
     </head>
     <body>
           <%
-            int Id=0;
-          	//String id =request.getParameter("t1");
+            int id=0;
+          
             String name = request.getParameter("t1");
             String date = request.getParameter("t2");
             String gender = request.getParameter("t3");
@@ -21,66 +20,37 @@
             String city = request.getParameter("t8");
             String pincode = request.getParameter("t9");
             
-            
-
             Connection con;
             Statement st;
             ResultSet rs;
              
-//            int Id =Integer.parseInt(request.getParameter("id"));
-             int status=0;
+			int status=0;
 
             try 
             {
                 Class.forName("com.mysql.jdbc.Driver");
                 con=DriverManager.getConnection("jdbc:mysql://localhost:3307/online_art_gallery?user=root & password=");
                 st = con.createStatement();
-                rs = st.executeQuery("select * from artist");
+                //rs = st.executeQuery("select * from artist");
 
                	status = st.executeUpdate("INSERT INTO artist (aname,a_date,gender,password,email,phone,address,city,zipcode) VALUES ('" + name + "','" + date + "','" + gender + "','" +  password + "','" + email + "','" + mobile + "','" + address + "','" + city + "'," + pincode + ")");
 
-//           		status=1;    
-                /*  while (rs.next()) {
-                    if (rs.getInt("customer_id")==Id) {
-                        status=1;
-                        break;
-                    }}
-                */
-                if (status == 1) 
+                if (status > 0) 
                 {
                    rs=st.executeQuery("select * from artist");
                    while(rs.next())
                    {
-                       if(rs.getString("email").equals(email) && rs.getString("password").equals(password) && rs.getString("a_date").equals(date) && rs.getString("phone").equals(mobile))
+                       if(rs.getString("email").equals(email) && rs.getString("phone").equals(mobile) && rs.getString("a_date").equals(date) && rs.getString("password").equals(password))
                        {
-                            
-                           Id=rs.getInt("artist_id");
-                           //out.println("Your Artist Id is:"+Id);
+                       		id=rs.getInt("artist_id");
                        }
                    }  
                      
-//                    s=Integer.parseInt(request.getParameter("t4"));
-//                    i=request.getParameter("t1");
-//                    j=request.getParameter("t2");
-//                    r=Integer.parseInt(request.getParameter("t3"));
-//                    
-//                    out.println("hi your name is"+" "+i);
-//                    out.println("<br>");
-//                    out.println("your Email is"+" "+j);
-//                    out.println("<br>");
-//                    out.println("your Salary is"+" "+r);
-//                    out.println("<br>");
-                    
-                      
-                    //  out.println("Data Inserted Successfully");
-//                    status=rs.executeUpdate("SELECT sid from players where sid = (select max(sid) from players)")
-//                if (status == 1) {
-              
          %>   
               
-     		<script>
-            	window.location = "../../Registration_Template/index_welcomeArtistReg.jsp?id=<%=Id%>";
-        	</script> 
+     			<script>
+            		window.location = "../../Registration_Template/index_welcomeArtistReg.jsp?id=<%=id%>";
+        		</script> 
          
         <%
                 }  
@@ -95,8 +65,8 @@
             }
        
 //            session.setAttribute("sid", Id);
-//                      out.println("Regestered Successfully");
-//         status=rs.executeQuery("SELECT sid from players where sid = (select max(sid) from players)");
+//            out.println("Regestered Successfully");
+//         	  status=rs.executeQuery("SELECT sid from players where sid = (select max(sid) from players)");
         %>
     </body>
 </html>

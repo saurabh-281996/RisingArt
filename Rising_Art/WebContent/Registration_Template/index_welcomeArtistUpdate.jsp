@@ -22,7 +22,7 @@
 	</div>
 		<div class="container">
 			<div class="heading">
-			<h4 style="text-align: left;float:left;"><a href="../index_WelcomeArtistHome.jsp"><font color="white"> back</font></a></h4>
+			<h4 style="text-align: left;float:left;"><a href="../index_WelcomeArtistUpdateHome.jsp"><font color="white"> home</font></a></h4>
 			<!-- <h4 style="text-align: right;float:right;"><a href="../Login_Template/artist_login.html"><font color="white">Login-></font></a></h4> -->
 				<h2>Data Updation</h2>
 				<!-- <p>Data Updation</p> -->

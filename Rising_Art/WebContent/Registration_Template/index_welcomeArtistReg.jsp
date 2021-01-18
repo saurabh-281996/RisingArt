@@ -44,9 +44,8 @@
                           <tr>
                           	  <td><center>click <a href="../Login_Template/artist_login.html"><u><b>here</b></u></a> to login</center></td> 
                           </tr>
-                    
-                      </table>
-                      </center>
+                </table>
+                </center>
                 </a>
                 <br><br><br><br><br><br><br><br><br><br>
 			</div>
